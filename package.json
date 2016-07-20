@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eugenefedotov/angular2.git"
+    "url": "https://github.com/eugenefedotov/angular2.git"
   },
   "keywords": [
     "angularjs",
