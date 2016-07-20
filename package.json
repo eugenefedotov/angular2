@@ -13,7 +13,11 @@
   "keywords": [
     "angularjs",
     "angular",
-    "angular2"
+    "angular2",
+    "bootstrap",
+    "less",
+    "babel",
+    "gulp"
   ],
   "author": "Eugene Fedotov",
   "license": "ISC",
