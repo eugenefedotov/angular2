@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/eugenefedotov/angular2/issues"
   },
-  "homepage": "https://github.com/eugenefedotov/angular2#readme"
+  "homepage": "https://github.com/eugenefedotov/angular2#readme",
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-preset-es2015": "^6.9.0",
+    "browserify": "^13.0.1",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.1.0",
+    "gulp-util": "^3.0.7"
+  }
 }
