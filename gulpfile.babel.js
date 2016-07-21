@@ -6,7 +6,7 @@ import source from 'vinyl-source-stream';
 import tsify from 'tsify';
 
 let devFolder = './app';
-let destFolder = './build';
+let buildFolder = './build';
 
 gulp.task('browserify', () => {
   return browserify({
@@ -24,7 +24,7 @@ gulp.task('browserify', () => {
       this.emit('end');
     })
     .pipe(source('bundle.js'))
-    .pipe(gulp.dest(destFolder));
+    .pipe(gulp.dest(buildFolder));
 });
 
 gulp.task('less', () => {
@@ -37,7 +37,7 @@ gulp.task('less', () => {
       gutil.log(gutil.colors.bgRed('lineNumber: ') + ' ' + err.lineNumber);
       gutil.log(gutil.colors.bgRed('extract: ') + err.extract.join(' '));
     })
-    .pipe(gulp.dest())
+    .pipe(gulp.dest(buildFolder + '/css'))
 });
 
 gulp.task('watch', () => {
