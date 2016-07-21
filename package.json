@@ -32,7 +32,8 @@
     "gulp": "^3.9.1",
     "gulp-less": "^3.1.0",
     "gulp-util": "^3.0.7",
-    "tsify": "^1.0.1"
+    "tsify": "^1.0.1",
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "@angular/common": "2.0.0-rc.4",
