@@ -4,6 +4,7 @@ import gutil from 'gulp-util';
 import browserify from 'browserify';
 import source from 'vinyl-source-stream';
 import tsify from 'tsify';
+import bs from 'browser-sync';
 
 let devFolder = './app';
 let buildFolder = './build';
@@ -40,10 +41,19 @@ gulp.task('less', () => {
     .pipe(gulp.dest(buildFolder + '/css'))
 });
 
+gulp.task('serve', () => {
+  bs.init({
+    server : devFolder,
+    port   : 8080
+  });
+});
+
 gulp.task('watch', () => {
   gulp.watch(devFolder + '/**/*.ts', ['browserify']);
   gulp.watch(devFolder + '/less/*.less', ['less']);
+  gulp.watch(devFolder + '/*.html', ['less']);
+  gulp.watch(devFolder + '/**/*.html', ['less']);
 });
 
 gulp.task('build', ['browserify', 'less']);
-gulp.task('default', ['build', 'watch']);
+gulp.task('default', ['serve', 'watch']);
