@@ -1,1 +1,1 @@
-# Angular 2 Development Environment (ES6)
+# Angular2 + Webpack Minimal Development Environment
