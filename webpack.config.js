@@ -17,12 +17,14 @@ module.exports = {
     filename: '[name].js'
   },
   resolve : {
-    extansions : ['', '.js', '.ts', '.html']
+    extansions : ['', '.js', '.ts', '.html', '.sass']
   },
   module  : {
     loaders : [
       {test : /\.ts$/, loaders : ['ts', 'angular2-template-loader'], exclude: /node_modules/},
-      {test: /\.html$/, loader: 'raw'}
+      {test: /\.html$/, loader: 'raw'},
+      { test: /\.scss$/, loader: "style!css!sass"},
+      {test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/, loader: 'file?name=fonts/[name].[hash].[ext]?'}
     ]
   },
   plugins: [
