@@ -1,5 +1,7 @@
 'use strict';
 
+var webpack = require('webpack');
+var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -24,6 +26,11 @@ module.exports = {
     ]
   },
   plugins: [
+
+    new CommonsChunkPlugin({
+      name: ['vendor', 'polyfills']
+    }),
+
     new HtmlWebpackPlugin({
       template: './public/index.html',
       chunksSortMode: 'dependency'
