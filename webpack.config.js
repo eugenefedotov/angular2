@@ -23,7 +23,7 @@ module.exports = {
     loaders : [
       {test : /\.ts$/, loaders : ['ts', 'angular2-template-loader']},
       {test: /\.html$/, loader: 'raw'},
-      {test: /\.css$/, loaders: ['style', 'css']},
+      {test: /\.css$/, loaders: ['css-to-string', 'style', 'css']},
       {test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/, loader: 'file?name=fonts/[name].[hash].[ext]?'}
     ]
   },

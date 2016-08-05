@@ -5,9 +5,9 @@ import { Component } from '@angular/core';
  */
 @Component({
   selector: 'my-app',
-  template: require('../public/app.component.html'),
+  template: require('./app.component.html'),
   styles: [
-    String(require('../styles/app.component.css'))
+    require('./app.component.css')
   ]
 })
 export class AppComponent {
