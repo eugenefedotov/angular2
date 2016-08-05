@@ -5,7 +5,16 @@ import { Component } from '@angular/core';
  */
 @Component({
   selector: 'my-app',
-  templateUrl: '../public/app.component.html',
-  //styleUrls: ['../styles/app.component.css']
+  template: require('../public/app.component.html'),
+  styles: [
+    String(require('../styles/app.component.css'))
+  ]
 })
-export class AppComponent {}
+export class AppComponent {
+
+  title: string;
+
+  constructor() {
+    this.title = 'Angular2 and WebPack ToDo Application';
+  }
+}
