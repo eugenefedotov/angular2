@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToDoListComponent } from './todo-list.component'
 /*
  * App Component
  * Top Level Component
@@ -8,7 +9,8 @@ import { Component } from '@angular/core';
   template: require('./app.component.html'),
   styles: [
     require('./app.component.css')
-  ]
+  ],
+  directives: [ToDoListComponent]
 })
 export class AppComponent {
 

@@ -8,16 +8,16 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   context: path.join( __dirname, '/src'),
   entry   : {
-    app: './bootstrap.ts',
-    vendor: './vendor.ts',
-    polyfills: './polyfills.ts'
+    app: './bootstrap',
+    vendor: './vendor',
+    polyfills: './polyfills'
   },
   output: {
     path: path.resolve(__dirname, '/build'),
     filename: '[name].js'
   },
   resolve : {
-    extansions : ['', '.js', '.ts', '.html', '.sass']
+    extensions : ['', '.ts', '.js']
   },
   module  : {
     loaders : [
@@ -28,7 +28,6 @@ module.exports = {
     ]
   },
   plugins: [
-
     new CommonsChunkPlugin({
       name: ['vendor', 'polyfills']
     }),
