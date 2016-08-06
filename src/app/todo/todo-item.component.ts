@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ToDo } from './todo';
 
 @Component({
   selector: 'todo-item',
@@ -9,5 +10,9 @@ import { Component, Input } from '@angular/core';
 })
 
 export class ToDoItem {
-  @Input() todo: string[];
+  @Input() todo: ToDo;
+
+  toggleDone() {
+    this.todo.done = !this.todo.done;
+  }
 }

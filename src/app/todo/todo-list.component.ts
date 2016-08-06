@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ToDoItem } from './todo-item.component'
+import { ToDoItem } from './todo-item.component';
+import { ToDo } from './todo';
 
 @Component({
   selector: 'todo-list',
@@ -11,7 +12,7 @@ import { ToDoItem } from './todo-item.component'
 })
 
 export class ToDoList {
-  todos: string[];
+  todos: ToDo[];
 
   constructor() {
     this.todos = [];
@@ -20,7 +21,7 @@ export class ToDoList {
   addToDo(input: HTMLInputElement) {
     let title = input.value;
     if(title) {
-      this.todos.push(title);
+      this.todos.push(new ToDo(title));
     }
     input.value = '';
   }
