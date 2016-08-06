@@ -19,7 +19,9 @@ export class ToDoListComponent {
 
   addToDo(input: HTMLInputElement) {
     let title = input.value;
-    this.todos.push(title);
+    if(title) {
+      this.todos.push(title);
+    }
     input.value = '';
   }
 }
