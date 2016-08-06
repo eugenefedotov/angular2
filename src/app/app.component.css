@@ -1,4 +1,7 @@
-.header h1{
+#header {
+  border-right: 1px solid rgba(34, 36, 38, 0.1);
+  }
+#header h1{
   margin: 0 18rem;
   color: #585a5b;
   }
