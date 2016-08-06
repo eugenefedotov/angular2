@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ToDoListComponent } from './todo-list.component'
+import { ToDoListComponent } from './todo/todo-list.component'
 /*
  * App Component
  * Top Level Component

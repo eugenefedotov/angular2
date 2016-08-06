@@ -2,9 +2,9 @@
   <div class="todo item" *ngFor="let todo of todos">
     <div class="ui checkbox">
       <input type="checkbox">
-      <label>{{ todo }}</label>
+      <label #label>{{ todo }}</label>
     </div>
 
-    <button type="button" class="ui red icon button"><i class="trash outline icon"></i></button>
+    <button type="button" class="ui icon basic negative button"><i class="trash outline icon"></i></button>
   </div>
 </div>
