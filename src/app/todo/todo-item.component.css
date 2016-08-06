@@ -1,4 +1,4 @@
-#todos .item {
+#todos todo-item {
   display: flex;
   align-items: center;
   }

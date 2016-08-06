@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ToDoListComponent } from './todo/todo-list.component'
+import { ToDoList } from './todo/todo-list.component'
 /*
  * App Component
  * Top Level Component
@@ -10,7 +10,7 @@ import { ToDoListComponent } from './todo/todo-list.component'
   styles: [
     require('./app.component.css')
   ],
-  directives: [ToDoListComponent]
+  directives: [ToDoList]
 })
 export class AppComponent {
 

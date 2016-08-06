@@ -11,6 +11,10 @@
       <i class="list unordered icon"></i>
       ToDo List
     </p>
-    <todo-items [todos]="todos"></todo-items>
+    <div id="todos" class="ui middle aligned divided selection list">
+      <div class="todo item" *ngFor="let todo of todos">
+        <todo-item [todo]="todo"></todo-item>
+      </div>
+    </div>
   </div>
 </div>

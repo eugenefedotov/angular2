@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ToDoItemsComponent } from './todo-items.component'
+import { ToDoItem } from './todo-item.component'
 
 @Component({
   selector: 'todo-list',
@@ -7,10 +7,10 @@ import { ToDoItemsComponent } from './todo-items.component'
   styles: [
     require('./todo-list.component.css')
   ],
-  directives: [ToDoItemsComponent]
+  directives: [ToDoItem]
 })
 
-export class ToDoListComponent {
+export class ToDoList {
   todos: string[];
 
   constructor() {
