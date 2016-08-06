@@ -10,4 +10,16 @@ import { ToDoItemsComponent } from './todo-items.component'
   directives: [ToDoItemsComponent]
 })
 
-export class ToDoListComponent {}
+export class ToDoListComponent {
+  todos: string[];
+
+  constructor() {
+    this.todos = [];
+  }
+
+  addToDo(input: HTMLInputElement) {
+    let title = input.value;
+    this.todos.push(title);
+    input.value = '';
+  }
+}

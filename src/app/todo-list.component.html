@@ -2,15 +2,15 @@
   <div class="ui segment">
     <div class="ui right labeled left icon input stretch">
       <i class="unordered list icon"></i>
-      <input type="text" placeholder="Add ToDo">
-      <a class="ui tag label">
-        Add ToDo
+      <input type="text" placeholder="What to do?" (keyup.enter)="addToDo(input)" #input>
+      <a class="ui tag label" (click)="addToDo(input)">
+        Add
       </a>
     </div>
-    <p class="ui horizontal divider">
+    <p *ngIf="todos.length > 0" class="ui horizontal divider">
       <i class="list unordered icon"></i>
       ToDo List
     </p>
-    <todo-items></todo-items>
+    <todo-items [todos]="todos"></todo-items>
   </div>
 </div>
